@@ -139,6 +139,12 @@ foreach($multi_array as $k=>$value) {
     }
     echo "<br>";
 }
+if (2==3) {
+    $msg ="Hi";
+}elseif(5==3) {
+    $msg="No";
+}
+echo $msg;
 // SUPER GLOBAL VARIABLES
 // print_r($_SERVER);
 echo $_SERVER['SERVER_PORT'];

@@ -46,5 +46,9 @@ if (isset($_SESSION['error'])) {
 
 
 }else{
-   header("Location: http://localhost:8000/forms/success.php");
+   require '../mail/mailfn.php';
+   if(send_mail($_POST['name'], $_POST['email'], $_POST['rollno'], $_POST['class'], $target)){
+
+      header("Location: http://localhost:8000/forms/success.php");
+   }
 }
