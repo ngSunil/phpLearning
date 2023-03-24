@@ -22,7 +22,7 @@ function send_mail($name, $email, $rollno, $class, $photo){
         //$mail->addAddress('testgeo@martvalley.com');
         $mail->addAddress($email, $name);
         $mail->addAttachment($photo, "Student Pic");
-        $mail->isHTML(true);								
+        $mail->isHTML(true);					
         $mail->Subject = 'Form Submit';
         $mail->Body = "Thank you <b>$name </b> ";
         $mail->AltBody = 'Body in plain text for non-HTML mail clients';

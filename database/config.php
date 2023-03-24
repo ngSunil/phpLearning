@@ -24,6 +24,31 @@ function insertDataUser($conn,  $email, $password){
     return 0;
 }
 
+function loginUser($conn, $email, $password){
+    $sql="SELECT * FROM user WHERE email='$email' AND password='$password'";
+    $result= $conn->query($sql);
+    $data=[];
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+           return $row['id'];
+        }
+    } 
+    return 0;
+}
+
+function getUserById($conn, $id){
+    $result= $conn->query("SELECT * FROM user WHERE id=$id");
+    $data=[];
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $data= $row;
+        }
+    }
+    return $data;
+}
+
 
 
 //fetch all

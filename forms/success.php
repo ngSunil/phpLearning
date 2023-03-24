@@ -7,6 +7,8 @@
    <title>Document</title>
 </head>
 <body>
-   <h1> Thank You </h1>
+<a href="../database/list.php">Go to homepage</a>
+
+   <h1> Entry Done succeffully!!</h1>
 </body>
 </html>
